@@ -15,6 +15,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>-child/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>-child/css/kia-custom.css">
 </head>
 
@@ -101,7 +102,7 @@
     do_action('storefront_before_content'); ?>
 
     <div id="content" class="site-content" tabindex="-1">
-        <div class="col-full">
+        <div id="primary" class="content-area container group">
 
 <?php
 /**

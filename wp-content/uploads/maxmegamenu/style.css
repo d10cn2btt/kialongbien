@@ -1,4 +1,4 @@
-/** Wednesday 14th of December 2016 10:11:15 AM (core) **/
+/** Thursday 15th of December 2016 03:13:06 AM (core) **/
 
 #mega-menu-wrap-primary, #mega-menu-wrap-primary #mega-menu-primary, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link {
   -moz-transition: none;
@@ -215,7 +215,7 @@
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus {
   background: #fff;
-  color: #fff;
+  color: #e11212;
   font-weight: normal;
   text-decoration: none;
   border-color: #fff;
@@ -283,7 +283,7 @@
   }
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
-  z-index: 999;
+  z-index: 1000;
   -webkit-border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
   -ms-border-radius: 0px 0px 0px 0px;
@@ -520,7 +520,7 @@
   }
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu {
-  z-index: 999;
+  z-index: 1000;
   position: absolute;
   width: 150px;
   border-top: 0px solid #fff;
@@ -773,5 +773,19 @@
   content: 'MENU';
 }
 #mega-menu-wrap-primary {
-  clear: both;
+  float: right;
+  position: initial;
+}
+#mega-menu-wrap-primary #mega-menu-primary {
+  position: initial;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+  height: 70px;
+  line-height: 70px;
+  padding: 0 20px;
+  transition: initial;
+  text-transform: uppercase;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover {
+  border-bottom: 6px solid #bb0d19;
 }
