@@ -164,7 +164,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	    <?php
 	    if($wpcs_display_header == "yes") { ?>
 				<div class="another_carousel_header">
-					<div class="title" style="font-size: <?php echo $wpcs_header_title_font_size; ?>; color: <?php echo $wpcs_header_title_font_color; ?>;"><?php echo $wpcs_title; ?></div>
+					<div class="box"><div class="box-header"><h2 class="box-title"><?php echo $wpcs_title; ?></h2></div></div>
 					<?php if ($wpcs_display_navigation_arrows == 'yes') { ?>
 						<i class="fa fa-angle-left prev-<?php echo $random_next_prev_id; ?>"></i>
 						<i class="fa fa-angle-right next-<?php echo $random_next_prev_id; ?>"></i>

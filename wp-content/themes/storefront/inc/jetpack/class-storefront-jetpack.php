@@ -37,7 +37,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 				'container'      => 'main',
 				'footer'         => 'page',
 				'type'           => 'click',
-				'posts_per_page' => '12',
+				'posts_per_page' => '9',
 				'render'         => array( $this, 'jetpack_infinite_scroll_loop' ),
 				'footer_widgets' => array(
 										'footer-1',

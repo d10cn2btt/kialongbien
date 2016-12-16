@@ -13,21 +13,23 @@
  */
 
 get_header(); ?>
+    </div>
+    <?php echo do_shortcode("[rev_slider alias='demo']"); ?>
+    <div id="primary" class="content-area container group">
+        <main id="main" class="site-main" role="main">
 
-		<main id="main" class="site-main" role="main">
+            <?php echo do_shortcode("[wpcs id='129']"); ?>
+            <?php
+            /**
+             * Functions hooked in to homepage action
+             *
+             * @hooked storefront_recent_products       - 30
+             * @hooked storefront_featured_products     - 40
+             * @hooked storefront_popular_products      - 50
+             */
+            do_action('kia-homepage');
+            ?>
 
-			<?php echo do_shortcode("[wpcs id='129']"); ?>
-			<?php
-			/**
-			 * Functions hooked in to homepage action
-			 *
-			 * @hooked storefront_recent_products       - 30
-			 * @hooked storefront_featured_products     - 40
-			 * @hooked storefront_popular_products      - 50
-			 */
-			do_action( 'kia-homepage' );
-			?>
-
-		</main><!-- #main -->
-<?php
+        </main><!-- #main -->
+    <?php
 get_footer();

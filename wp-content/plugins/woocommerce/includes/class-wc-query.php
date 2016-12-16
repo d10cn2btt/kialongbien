@@ -391,6 +391,7 @@ class WC_Query {
 		$q->set( 'meta_query', $this->get_meta_query( $q->get( 'meta_query' ) ) );
 		$q->set( 'tax_query', $this->get_tax_query( $q->get( 'tax_query' ) ) );
 		$q->set( 'posts_per_page', $q->get( 'posts_per_page' ) ? $q->get( 'posts_per_page' ) : apply_filters( 'loop_shop_per_page', get_option( 'posts_per_page' ) ) );
+        echo "per_page : " . $q->get( 'posts_per_page' );
 		$q->set( 'wc_query', 'product_query' );
 		$q->set( 'post__in', array_unique( (array) apply_filters( 'loop_shop_post_in', array() ) ) );
 
