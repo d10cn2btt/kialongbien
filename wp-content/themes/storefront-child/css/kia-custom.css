@@ -28,4 +28,30 @@
   .box .box-content .columns-3 ul.products li.product .price .amount {
     font-size: 16px; }
 
+.pathpage .breadcrumb {
+  background: none;
+  margin: 0;
+  padding-left: 0; }
+  .pathpage .breadcrumb a {
+    color: black; }
+    .pathpage .breadcrumb a:hover {
+      text-decoration: none;
+      color: #b70100; }
+    .pathpage .breadcrumb a:first-of-type:before {
+      display: inline-block;
+      font-size: inherit;
+      -webkit-font-smoothing: antialiased;
+      content: "\f015";
+      margin-right: .5407911001em;
+      font: normal normal normal 1em/1 FontAwesome; }
+
+.storefront-sorting .gridlist-toggle {
+  float: right;
+  clear: initial;
+  padding: 0 !important; }
+
+ul.products li.product img {
+  width: 100%;
+  height: auto; }
+
 /*# sourceMappingURL=kia-custom.css.map */

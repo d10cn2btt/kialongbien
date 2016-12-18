@@ -102,12 +102,14 @@
     do_action('storefront_before_content'); ?>
 
     <div id="content" class="site-content" tabindex="-1">
+        <?php
+        /**
+         * Functions hooked in to storefront_content_top
+         *
+         * @hooked woocommerce_breadcrumb - 10
+         */
+        do_action('storefront_content_top');
+        ?>
         <div id="primary" class="content-area container group">
 
-<?php
-/**
- * Functions hooked in to storefront_content_top
- *
- * @hooked woocommerce_breadcrumb - 10
- */
-do_action('storefront_content_top');
+

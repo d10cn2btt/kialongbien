@@ -65,5 +65,23 @@ function custom_product_recent_args($args)
 
 add_filter('storefront_recent_products_args', 'custom_product_recent_args');
 
+/**
+ * custom param breadcumb
+ * @hook woocommerce_breadcrumb_defaults
+ */
+function custom_breadcumb_args($args) {
+	$args = array(
+		'wrap_before' => '<ol class="breadcrumb" ' . ( is_single() ? 'itemprop="breadcrumb"' : '' ) . '>',
+		'delimiter'   => '',
+		'wrap_after'  => '</ol>',
+		'before'      => '<li>',
+		'after'       => '</li>',
+		'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' )
+	);
+	return $args;
+}
+
+add_filter('woocommerce_breadcrumb_defaults', 'custom_breadcumb_args');
+
 require('inc/kia-template-function.php');
 require('inc/kia-template-hooks.php');

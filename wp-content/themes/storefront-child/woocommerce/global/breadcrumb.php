@@ -1,3 +1,5 @@
+<div class="pathpage group">
+<div class="container">
 <?php
 /**
  * Shop breadcrumb
@@ -46,3 +48,6 @@ if ( ! empty( $breadcrumb ) ) {
 	echo $wrap_after;
 
 }
+?>
+</div>
+</div>
