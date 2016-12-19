@@ -1,6 +1,16 @@
 .hotline .icon em {
   vertical-align: middle; }
 
+.price ins {
+  font-size: 18px;
+  color: #ee2d24 !important;
+  font-weight: 700;
+  text-decoration: none; }
+.price del {
+  font-size: 14px; }
+.price .amount {
+  font-size: 16px; }
+
 .box .box-header {
   margin-bottom: 20px; }
   .box .box-header h2 {
@@ -18,15 +28,6 @@
     font-weight: 400;
     max-height: 40px;
     color: black; }
-  .box .box-content .columns-3 ul.products li.product .price ins {
-    font-size: 18px;
-    color: #ee2d24;
-    font-weight: 700;
-    text-decoration: none; }
-  .box .box-content .columns-3 ul.products li.product .price del {
-    font-size: 14px; }
-  .box .box-content .columns-3 ul.products li.product .price .amount {
-    font-size: 16px; }
 
 .pathpage .breadcrumb {
   background: none;
@@ -45,13 +46,45 @@
       margin-right: .5407911001em;
       font: normal normal normal 1em/1 FontAwesome; }
 
+.storefront-sorting form.woocommerce-ordering {
+  margin: 0;
+  padding: 0; }
+.storefront-sorting select.orderby, .storefront-sorting p.woocommerce-result-count {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143; }
 .storefront-sorting .gridlist-toggle {
   float: right;
   clear: initial;
-  padding: 0 !important; }
+  padding: 0 !important;
+  zoom: 1.2; }
 
-ul.products li.product img {
-  width: 100%;
-  height: auto; }
+#main ul.products li.product {
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 15px; }
+  #main ul.products li.product img {
+    width: 100%;
+    height: auto; }
+  #main ul.products li.product h3 {
+    text-transform: uppercase;
+    color: black; }
+  #main ul.products li.product a:hover {
+    text-decoration: none; }
+#main ul.products.list h3, #main ul.products.list .price, #main ul.products.list .gridlist-buttonwrap, #main ul.products.list .product-description {
+  float: left;
+  margin: 0; }
+#main ul.products.list h3 {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px; }
+  #main ul.products.list h3:hover {
+    color: #b70100; }
+#main ul.products.list .price {
+  margin-bottom: 10px; }
+#main ul.products.list img {
+  margin-right: 15px !important; }
 
 /*# sourceMappingURL=kia-custom.css.map */

@@ -29,7 +29,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			add_action( 'wp_enqueue_scripts', 						array( $this, 'woocommerce_scripts' ),	20 );
 			add_filter( 'woocommerce_enqueue_styles', 				'__return_empty_array' );
 			add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_args' ) );
-			add_filter( 'woocommerce_product_thumbnails_columns', 	array( $this, 'thumbnail_columns' ) );
+//			add_filter( 'woocommerce_product_thumbnails_columns', 	array( $this, 'thumbnail_columns' ) );
 			add_filter( 'loop_shop_per_page', 						array( $this, 'products_per_page' ) );
 
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.5', '<' ) ) {

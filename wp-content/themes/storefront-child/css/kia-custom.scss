@@ -3,12 +3,36 @@
   height: auto;
 }
 
+@mixin productItemSize {
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 15px;
+}
+
 //header
 .hotline {
   .icon {
     em {
       vertical-align: middle;
     }
+  }
+}
+
+//custome price
+.price {
+  ins {
+    font-size: 18px;
+    color: #ee2d24 !important;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  del {
+    font-size: 14px;
+  }
+
+  .amount {
+    font-size: 16px;
   }
 }
 
@@ -25,9 +49,7 @@
   .box-content {
     .columns-3 ul.products {
       li.product {
-        width: 32%;
-        margin-right: 2%;
-        margin-bottom: 15px;
+        @include productItemSize;
 
         img {
           @include imgProductSize;
@@ -39,23 +61,6 @@
           font-weight: 400;
           max-height: 40px;
           color: black;
-        }
-
-        .price {
-          ins {
-            font-size: 18px;
-            color: #ee2d24;
-            font-weight: 700;
-            text-decoration: none;
-          }
-
-          del {
-            font-size: 14px;
-          }
-
-          .amount {
-            font-size: 16px;
-          }
         }
       }
     }
@@ -91,17 +96,69 @@
 
 //sort
 .storefront-sorting {
+  form.woocommerce-ordering {
+    margin: 0;
+    padding: 0;
+  }
+
+  select.orderby, p.woocommerce-result-count {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+  }
+
   .gridlist-toggle {
     float: right;
     clear: initial;
     padding: 0 !important;
+    zoom: 1.2;
   }
 }
 
-ul.products {
-  li.product {
-    img {
-      @include imgProductSize;
+#main {
+  ul.products {
+    li.product {
+      @include productItemSize;
+
+      img {
+        @include imgProductSize;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        color: black;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.list {
+      h3, .price, .gridlist-buttonwrap, .product-description {
+        float: left;
+        margin: 0;
+      }
+
+      h3 {
+        padding-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 16px;
+
+        &:hover {
+          color: #b70100;
+        }
+      }
+
+      .price {
+        margin-bottom: 10px;
+      }
+
+      img {
+        margin-right: 15px !important;
+      }
     }
   }
 }

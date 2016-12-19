@@ -27,6 +27,8 @@ function tp_homepage_blocks()
     remove_action('homepage', 'storefront_product_categories', 20);
     remove_action('homepage', 'storefront_featured_products', 40);
     remove_action('homepage', 'storefront_popular_products', 50);
+
+    remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 }
 
 add_action('after_setup_theme', 'tp_homepage_blocks', 10);

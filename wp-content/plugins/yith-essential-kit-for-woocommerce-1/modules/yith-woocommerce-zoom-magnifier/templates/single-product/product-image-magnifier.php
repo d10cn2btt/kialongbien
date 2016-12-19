@@ -20,6 +20,7 @@ $slider_items = get_option ( 'yith_wcmg_slider_items', 3 );
 if ( ! isset( $slider_items ) || ( $slider_items == null ) ) {
     $slider_items = 3;
 }
+
 ?>
 <div class="images<?php if ( $is_IE ): ?> ie<?php endif ?>">
 
@@ -46,13 +47,13 @@ if ( ! isset( $slider_items ) || ( $slider_items == null ) ) {
 <script type="text/javascript" charset="utf-8">
 	var yith_magnifier_options = {
 
-		enableSlider: 'true',
+		enableSlider: <?php echo $enable_slider ? 'true' : 'false' ?>,
 
-		
+		<?php if ( $enable_slider ): ?>
 		sliderOptions: {
-			responsive: 'true',
-			circular: 'true',
-			infinite: 'true',
+			responsive: <?php echo get_option ( 'yith_wcmg_slider_responsive' ) == 'yes' ? 'true' : 'false' ?>,
+			circular: <?php echo get_option ( 'yith_wcmg_slider_circular' ) == 'yes' ? 'true' : 'false' ?>,
+			infinite: <?php echo get_option ( 'yith_wcmg_slider_infinite' ) == 'yes' ? 'true' : 'false' ?>,
 			direction: 'left',
 			debug: false,
 			auto: false,
@@ -65,16 +66,18 @@ if ( ! isset( $slider_items ) || ( $slider_items == null ) ) {
 				button: "#slider-next",
 				key: "right"
 			},
+			//width   : <?php echo yit_shop_single_w () + 18 ?>,
 			scroll: {
 				items: 1,
 				pauseOnHover: true
 			},
 			items: {
-				visible: 3
+				width: <?php echo yit_shop_thumbnail_w () + 4 ?>,
+				visible: <?php echo apply_filters ( 'woocommerce_product_thumbnails_columns', $slider_items ) ?>
 			}
 		},
 
-		
+		<?php endif ?>
 
 		showTitle: false,
 		zoomWidth: '<?php echo get_option ( 'yith_wcmg_zoom_width' ) ?>',
